@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Registration Form</title>
+</head>
+<body>
+<h1 align="center">Registration Form</h1>
+<hr/>
+<div>
+			
+<fieldset>
+        <form action= "RegistrationServlet" method="get" >
+            <table>
+             	<tr>
+                    <td>Name:</td>
+                    <td><input type="text" name="name" size="15" required/></td>
+                </tr>
+                <tr>
+                    <td>Customer Id:</td>
+                    <td><input type="text" name="cid" size="15" required/></td>
+                </tr>
+                <tr>
+                    <td>Gender :</td>
+                    <td><input type="radio" name="gender" value="M"/>Male
+                    <input type="radio" name="gender" value="F" />Female
+                    </td>
+                </tr>
+                <tr>
+                    <td>City:</td>
+                   	<td>
+                   	<select name="city">
+			  			  <option value="city1">Noida</option>
+						  <option value="city2">New Delhi</option>
+						  <option value="city3">Gurgaon</option>
+						  <option value="city4">Ghaziabad</option>
+						  <option value="city4">Greater Noida</option>
+					</select>
+					</td>
+                </tr>
+                <tr>
+                    <td>E-mail Id:</td>
+                    <td><input type="email" name="email" size="15" required/></td>
+                </tr>
+                <tr>
+                    <td>Password:</td>
+                    <td><input type="password" name="password" size="15" required/></td>
+                </tr>
+                <tr>
+                <tr>
+                    <td><input type="Submit" value="Submit"/></td>
+                    <td><input type="Reset" value="Reset"/></td>
+                </tr>
+        
+            </table>
+        </form>
+        </fieldset>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+</head>
+<body>
+	<style type="text/css">
+		div.div1{
+			color: orange;
+			text-align: center;
+			font-size: 20px;
+		}
+	</style>
+	<h1 style="color: Green " align="center">User Successfully Registered</h1>
+	<div id="xyz" class="div1">
+		
+	</div>
+
+ 	<script type="text/javascript">
+
+		document.getElementById("xyz").innerHTML = "First Name: "+localStorage.getItem("d1")+"<br/>"+"Last Name: "+localStorage.getItem("d2")+"<br/>"+"Age: "+localStorage.getItem("d3")+"<br/>"+"Gender: "+localStorage.getItem("d4")+"<br/>"+"Address: "+localStorage.getItem("d5");
+	</script>
+</body>
+</html>

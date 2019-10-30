@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registration Page</title>
+</head>
+<body>
+	<style type="text/css">
+		div.div1{
+			align-content: center;
+			width: 400px;
+			height: 170px;
+			margin-left: 580px;
+			background-color: skyblue;
+		}
+		input {
+			background-color:cyan
+		}
+	</style>
+	<div style="background-color: lightgreen; width: 400px; height: 50px; margin-left: 580px">
+
+	<h1 style="text-align: center;color: darkgreen">User Registration</h1>
+</div>
+	<div class="div1">
+		<fieldset>
+        <form name="form1" action= "Success.html" method="get" >
+            <table>
+             	<tr>
+                    <td>First Name:</td>
+                    <td id=><input type="text" id="fname" size="15" onfocus="changeColor(this)" onblur="changeColorAgain(this)" 
+                    	required/></td>
+                <tr>
+                	<td>Last Name:</td>
+                	<td><input type="text" id="lname" onfocus="changeColor(this)" onblur="changeColorAgain(this)" size="15"/></td>
+                </tr>
+                  <tr>
+                    <td>Age:</td>
+                    <td><input type="text" id="age" size="15" onfocus="changeColor(this)" onblur="changeColorAgain(this)" required /></td>
+                </tr>
+                <tr>
+                    <td>Gender :</td>
+                    <td>
+                    	<select id="gender">
+			  			  <option value="Male">Male</option>
+						  <option value="Female">Female</option>
+						</select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Address:</td>
+                    <td><input type="text" id="address" size="30" onfocus="changeColor(this)"  onblur="changeColorAgain(this)" required/></td>
+                </tr>
+
+                <tr>
+                	<td></td>
+                    <td><button type="button" onclick="userdetails()" />Submit</td>
+                </tr>
+        
+            </table>
+        </form>
+        </fieldset>
+	</div>
+	<script type="text/javascript">
+		function userdetails() {
+			var data1=document.getElementById("fname").value;
+			var data2=document.getElementById("lname").value;
+			var data3=document.getElementById("age").value;
+			var data4=document.getElementById("gender").value;
+			var data5=document.getElementById("address").value;
+
+			localStorage.setItem("d1",data1);
+			localStorage.setItem("d2",data2);
+			localStorage.setItem("d3",data3);
+			localStorage.setItem("d4",data4);
+			localStorage.setItem("d5",data5);
+
+			var c=confirm("Are you sure?"+ "\n"+"First Name: "+data1+"\n"+"Last Name: "+data2+"\n"+"Age: "+data3+"\n"+"Gender: "+data4+"\n"+"Address: "+data5);
+			
+				if (c==true) {
+					window.open("Success.html");
+
+					/*var d=document.getElementsByTagName("body")[0];
+
+					d.innerHTML="You are successfully registered";*/
+			}	
+		}
+		function changeColor(element){
+			element.style.backgroundColor="yellow";
+
+		}
+		function changeColorAgain(element){
+			element.style.backgroundColor="cyan";
+
+		}
+	</script>
+</body>
+</html>

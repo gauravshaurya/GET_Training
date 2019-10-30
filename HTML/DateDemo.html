@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Time Demo
+	</title>
+	
+</head>
+<body>
+	<style type="text/css">
+		div.div1{
+			text-align: center;
+			color: orange;
+			font-size: 20px;
+		}
+		div.div2{
+			text-align: center;
+			color: green;
+			font-size: 50px;
+		}
+	</style>
+	<div class=div2>
+		<p>Time is:</p>
+	</div>
+	<div class=div1>
+		<p id="demo"></p>
+		<p id="demo1"></p>
+		<p id="demo2"></p>
+	</div>
+<script type="text/javascript">
+		var d = new Date();
+			document.getElementById("demo").innerHTML = d.getHours();
+			document.getElementById("demo1").innerHTML=d.getMinutes();
+			document.getElementById("demo2").innerHTML=d.getSeconds();
+			function timedRefresh(timeoutPeriod) {
+	setTimeout("location.reload(true);",timeoutPeriod);
+}
+
+window.onload = timedRefresh(1000);
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,79 @@
+<html>
+	<head>
+		<title>Analog Clock</title>
+	</head>
+	<body>
+		<canvas id="clockcanvas" width="500" height="500" style="margin-top: 0px;margin-left:0px">
+		</canvas>
+		<script type="text/javascript">
+			var canvas=document.getElementById("clockcanvas");
+			var ctx=canvas.getContext("2d");
+			ctx.beginPath();
+			ctx.rect(0, 0, 500, 500);
+			ctx.fillStyle = "#66c2ff";
+			ctx.fill();
+
+			ctx.beginPath();
+			ctx.arc(250,250,240,0,2*Math.PI);
+			ctx.fillStyle="#ccffcc";
+			ctx.fill();
+
+			ctx.beginPath();
+			ctx.arc(250,250,230,0,2*Math.PI);
+			ctx.fillStyle="#ff0000";
+			ctx.fill();
+
+			ctx.beginPath();
+			ctx.arc(250,250,225,0,2*Math.PI);
+			ctx.fillStyle="#9ae5e5";
+			ctx.fill();
+
+			ctx.beginPath();
+			ctx.arc(250,250,15,0,2*Math.PI);
+			ctx.fillStyle="black";
+			ctx.fill();
+
+			ctx.beginPath();
+			ctx.lineWidth="5";
+			ctx.strokeStyle="red";
+			ctx.moveTo(250,250);
+			ctx.lineTo(250,75);
+			ctx.stroke();
+			ctx.closePath();
+
+			ctx.beginPath();
+			ctx.lineWidth="5";
+			ctx.strokeStyle="red";
+			ctx.moveTo(250,250);
+			ctx.lineTo(400,250);
+			ctx.stroke();
+			ctx.beginPath();
+			
+			ctx.beginPath();
+			ctx.lineWidth="2";
+			ctx.strokeStyle="red";
+			ctx.moveTo(250,250);
+			ctx.lineTo(400,100);
+			ctx.stroke();
+			ctx.closePath();
+
+			ctx.beginPath();
+			ctx.fillStyle = "black";
+			ctx.font = "30px Arial";
+			ctx.textAlign = "center";
+			ctx.fillText("12", 250,50 );
+			ctx.fillText("1", 350,70 );
+			ctx.fillText("2", 425,150 );
+			ctx.fillText("3", 450,250 );
+			ctx.fillText("4", 425,350 );
+			ctx.fillText("5", 350,425 );
+			ctx.fillText("6", 250,465 );
+			ctx.fillText("7", 150,425 );
+			ctx.fillText("8", 75,350 );
+			ctx.fillText("9", 50,250 );
+			ctx.fillText("10", 75,150 );
+			ctx.fillText("11", 150,75 );
+			ctx.closePath();
+		</script>	
+	</body>
+	</html>

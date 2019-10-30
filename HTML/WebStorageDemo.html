@@ -1,0 +1,50 @@
+<html>
+	<head>
+		<title>Web Storage Demo</title>
+	</head>
+
+	<body>
+		<fieldset>
+        <form action= "" method="get" >
+    	<table>
+		<tr>
+     	<label>Select Product: </label>
+             <select id = "myList">
+               <option value = "1">Jeans</option>
+               <option value = "2">Shirt</option>
+               <option value = "3">T-Shirt</option>
+               <option value = "4">Jeans</option>
+             </select>
+        </tr>
+        <tr>
+       	<td>Quantity: </td>
+    	<td><input type="number" name="num" size="5"/></td>
+        </tr>
+       	<tr>
+       		<td/>
+            <td><button type="button" value="Add" onclick="addDetails()"/>Add</td>
+        </tr>
+    </table>
+</form>
+		<script type="text/javascript">
+			function addDetails(){
+				var data1=document.getElementById("mylist").value;
+				var data2=document.getElementById().value;
+
+				sessionStrorage.setItem("productDetails",data1);
+				sessionStrorage.setItem("quantity",data2);
+
+			}
+			function getdetails(){
+				var fetchedData=sessionStrorage.getItem("productDetails");
+				alert("Product Details :"+fetchedData);
+			}
+		</script>
+		<div id="mydiv">
+
+
+		</div>
+
+
+
+</html>
